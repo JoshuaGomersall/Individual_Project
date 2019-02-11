@@ -1,4 +1,4 @@
-<style>
+<script>
 
 @font-face {
    font-family: Adventure;
@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #ff7070;
+  background-color: #ff5447;
 }
 
 h1 
@@ -82,8 +82,15 @@ font-family: Adventure;
 }
 .topnav a.active 
 {
-  background-color: #ff7070;
+  background-color: #ff5447;
   color: white;
+}
+
+<body>
+<body text="green">
+</body>
+
+</style>r: white;
 }
 
 <body>
