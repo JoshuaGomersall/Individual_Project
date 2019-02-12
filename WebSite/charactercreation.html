@@ -210,16 +210,23 @@ if (clazz.options[clazz.selectedIndex].text === "Wizard")
 	classcha = 1;
 }
 
+	var strengthtotal = racestr + classstr;
+	var dextotal = racedex + classdex;
+	var smarttotal = racesmart + classsmart;
+	var vigortotal = racevigor + classvigor;
+	var chatotal = racecha + classcha;
+
+
 var strength = document.getElementById('Strength');
-	strength.innerHTML = racestr + classstr;
+	strength.innerHTML = strengthtotal;
 	var dex = document.getElementById('Dex');
-	dex.innerHTML = racedex + classdex;
+	dex.innerHTML = dextotal;
 	var smart = document.getElementById('Smart');
-	smart.innerHTML = racesmart + classsmart;
+	smart.innerHTML = smarttotal;
 	var vigor = document.getElementById('Vigor');
-	vigor.innerHTML = racevigor + classvigor;
+	vigor.innerHTML = vigortotal;
 	var cha = document.getElementById('Cha');
-	cha.innerHTML = racecha + classcha;
+	cha.innerHTML = chatotal;
 }
 </script>
 
