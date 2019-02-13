@@ -4,6 +4,7 @@
 <head>
      <link rel="stylesheet" type="text/css" href="css.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="Script.js"></script>
 </head>
 <body>
 <div class="topnav">
@@ -19,257 +20,54 @@
 </head>
 <body>
 
-
-
-
-<script>
-function displayScore() 
-{
-var racestr =1;
-var racedex = 1;
-var racesmart =1;
-var racevigor = 1;
-var racecha = 1;
-
-var classstr = 1;
-var classdex = 1;
-var classsmart =1;
-var classvigor = 1;
-var classcha = 1;
-
-var race = document.getElementById('race');
-
-if (race.options[race.selectedIndex].text === "DragonBorn")
-{
-	racestr =1;
-	racedex = 0;
-	racesmart =0;
-	racevigor = 0;
-	racecha = 2;
-}
-if (race.options[race.selectedIndex].text === "Dwarf")
-{
-	racestr =1;
-	racedex = 0;
-	racesmart =0;
-	racevigor = 2;
-	racecha = 0;
-}
-if (race.options[race.selectedIndex].text === "Elf")
-{
-	racestr =0;
-	racedex = 2;
-	racesmart =1;
-	racevigor = 0;
-	racecha = 0;
-}
-if (race.options[race.selectedIndex].text === "Gnome")
-{
-	racestr =0;
-	racedex = 1;
-	racesmart =2;
-	racevigor = 0;
-	racecha = 0;
-}
-if (race.options[race.selectedIndex].text === "Half-Elf")
-{
-	racestr =1;
-	racedex = 1;
-	racesmart =0;
-	racevigor = 0;
-	racecha = 2;
-}
-if (race.options[race.selectedIndex].text === "Half-Orc")
-{
-	racestr =2;
-	racedex = 0;
-	racesmart =0;
-	racevigor = 1;
-	racecha = 0;
-}
-if (race.options[race.selectedIndex].text === "Halfling")
-{
-	racestr = 0;
-	racedex = 2;
-	racesmart = 0;
-	racevigor = 0;
-	racecha = 1;
-}
-if (race.options[race.selectedIndex].text === "Human")
-{
-	racestr =1;
-	racedex = 1;
-	racesmart =1;
-	racevigor = 1;
-	racecha = 1;
-}
-if (race.options[race.selectedIndex].text === "Tiefling")
-{
-	racestr = 0;
-	racedex = 0;
-	racesmart = 1;
-	racevigor = 0;
-	racecha = 2;
-}
-
-var clazz = document.getElementById('class');
-if (clazz.options[clazz.selectedIndex].text === "Barbarian")
-{
-	classstr = 2;
-	classdex = 0;
-	classsmart = 0;
-	classvigor = 2;
-	classcha = 0;
-}
-if (clazz.options[clazz.selectedIndex].text === "Bard")
-{
-	classstr = 0;
-	classdex = 2;
-	classsmart = 0;
-	classvigor = 0;
-	classcha = 2;
-}
-if (clazz.options[clazz.selectedIndex].text === "Cleric")
-{
-	classstr = 1;
-	classdex = 0;
-	classsmart = 0;
-	classvigor = 1;
-	classcha = 2;
-}
-if (clazz.options[clazz.selectedIndex].text === "Druid")
-{
-	classstr = 0;
-	classdex = 1;
-	classsmart = 2;
-	classvigor = 1;
-	classcha = 0;
-}
-if (clazz.options[clazz.selectedIndex].text === "Fighter")
-{
-	classstr = 2;
-	classdex = 1;
-	classsmart = 0;
-	classvigor = 1;
-	classcha = 0;
-}
-if (clazz.options[clazz.selectedIndex].text === "Monk")
-{
-	classstr = 0;
-	classdex = 2;
-	classsmart = 1;
-	classvigor = 1;
-	classcha = 0;
-}
-if (clazz.options[clazz.selectedIndex].text === "Paladin")
-{
-	classstr = 1;
-	classdex = 0;
-	classsmart = 0;
-	classvigor = 1;
-	classcha = 2;
-}
-if (clazz.options[clazz.selectedIndex].text === "Ranger")
-{
-	classstr = 0;
-	classdex = 2;
-	classsmart = 0;
-	classvigor = 1;
-	classcha = 1;
-}
-if (clazz.options[clazz.selectedIndex].text === "Rouge")
-{
-	classstr = 0;
-	classdex = 2;
-	classsmart = 1;
-	classvigor = 0;
-	classcha = 1;
-}
-if (clazz.options[clazz.selectedIndex].text === "Sorcerer")
-{
-	classstr = 0;
-	classdex = 1;
-	classsmart = 1;
-	classvigor = 0;
-	classcha = 2;
-}
-if (clazz.options[clazz.selectedIndex].text === "Warlock")
-{
-	classstr = 0;
-	classdex = 1;
-	classsmart = 0;
-	classvigor = 1;
-	classcha = 2;
-}
-if (clazz.options[clazz.selectedIndex].text === "Wizard")
-{
-	classstr = 0;
-	classdex = 1;
-	classsmart = 2;
-	classvigor = 0;
-	classcha = 1;
-}
-
-	var strengthtotal = racestr + classstr;
-	var dextotal = racedex + classdex;
-	var smarttotal = racesmart + classsmart;
-	var vigortotal = racevigor + classvigor;
-	var chatotal = racecha + classcha;
-
-
-var strength = document.getElementById('Strength');
-	strength.innerHTML = strengthtotal;
-	var dex = document.getElementById('Dex');
-	dex.innerHTML = dextotal;
-	var smart = document.getElementById('Smart');
-	smart.innerHTML = smarttotal;
-	var vigor = document.getElementById('Vigor');
-	vigor.innerHTML = vigortotal;
-	var cha = document.getElementById('Cha');
-	cha.innerHTML = chatotal;
-}
-</script>
-
 <h1>Character Creation</h1>
 
 <FORM>
 Character Name:<br>
-  <input type="text" name="Name">
+  <input id="name" type="text" name="Name">
 
 <h3>Race :
 
 <select id="race" onchange="displayScore();">
-	<option value="dragonborn">DragonBorn</option>
-	<option value="dwarf">Dwarf</option>
-	<option value="elf">Elf</option>
-	<option value="gnome">Gnome</option>
-	<option value="halfelf">Half-Elf</option>
-	<option value="halforc">Half-Orc</option>
-	<option value="halfling">Halfling</option>
-    <option value="human">Human</option>
-	<option value="tiefling">Tiefling</option>
+	<option id="DragonBorn" value="dragonborn">DragonBorn</option>
+	<option id="Dwarf" value="dwarf">Dwarf</option>
+	<option id="Elf" value="elf">Elf</option>
+	<option id="Gnome" value="gnome">Gnome</option>
+	<option id="Half-Elf" value="halfelf">Half-Elf</option>
+	<option id="Half-Orc" value="halforc">Half-Orc</option>
+	<option id="Halfling" value="halfling">Halfling</option>
+    <option id="Human" value="human">Human</option>
+	<option id="Tiefling" value="tiefling">Tiefling</option>
   </select>
    </h3>
  <h3>Class 
   <select id="class" onchange="displayScore();">
-    <option value="barbarian">Barbarian</option>
-	<option value="bard">Bard</option>
-	<option value="cleric">Cleric</option>
-	<option value="Druid">Druid</option>
-    <option value="fighter">Fighter</option>
-	<option value="monk">Monk</option>
-	<option value="paladin">Paladin</option>
-	<option value="ranger">Ranger</option>
-	<option value="rouge">Rouge</option>
-	<option value="sorcerer">Sorcerer</option>
-	<option value="warlock">Warlock</option>
-    <option value="wizard">Wizard</option>
+    <option id="Barbarian" value="barbarian">Barbarian</option>
+	<option id="Bard" value="bard">Bard</option>
+	<option id="Cleric" value="cleric">Cleric</option>
+	<option id="Druid" value="Druid">Druid</option>
+    <option id="Fighter" value="fighter">Fighter</option>
+	<option id="Monk" value="monk">Monk</option>
+	<option id="Paladin" value="paladin">Paladin</option>
+	<option id="Ranger" value="ranger">Ranger</option>
+	<option id="Rouge" value="rouge">Rouge</option>
+	<option id="Sorcerer" value="sorcerer">Sorcerer</option>
+	<option id="Warlock" value="warlock">Warlock</option>
+    <option id="Wizard" value="wizard">Wizard</option>
   </select>
    </h3>
-  <input type="submit"value="Done"></input>
+   <div id="randomdisplay">
+   <p id="rannumber1"></p>
+   <p id="rannumber2"></p>
+   <p id="rannumber3"></p>
+   </div>
+	<input type="button" onclick="randomcharacter()"; value="Random"></input>
+	<br>
+	<br>
+	<input type="submit"value="Done"></input>
 </FORM>
  
-<h3>Character Scores </h3>  
+<h3>Character Ratings </h3>  
 <h4>
 Strength : <span id="Strength"></span>
 </br>
@@ -281,5 +79,8 @@ Vigor : <span id="Vigor"></span>
 </br>
 Charisma : <span id="Cha"></span>
 </h4>
+
+
+
 </body>
 </html>
