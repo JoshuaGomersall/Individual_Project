@@ -1,15 +1,18 @@
 package AdventureGame;
 
-public class GameCharacter {
+public class GameCharacter 
+{
 	private static int hp;
 	private int attack;
 	private int defence;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 
 	}
 
-	public int takeDamage(int damageAmount) {
+	public int takeDamage(int damageAmount) 
+	{
 		int reduce = damageAmount - getDefence();
 		setHp(getHp() - reduce);
 		return hp;

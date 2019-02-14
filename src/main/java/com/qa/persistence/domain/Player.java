@@ -1,33 +1,18 @@
 package com.qa.persistence.domain;
 
-import AdventureGame.GameCharacter;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class Player extends GameCharacter {
-
-	
-
-	
-
-	public Player(int hp, int attack, int defence, int xp, String racename, String classname, int attackBonus,
-			int dodgeBonus, int sightBonus, int smartsBonus, int charmBonus) 
-	{
-		super(hp, attack, defence);
-		this.xp = xp;
-		this.racename = racename;
-		this.classname = classname;
-		this.attackBonus = attackBonus;
-		this.dodgeBonus = dodgeBonus;
-		this.sightBonus = sightBonus;
-		this.smartsBonus = smartsBonus;
-		this.charmBonus = charmBonus;
-	}
-
-	
-	// Player Stats
-	private static String playerName = "John";
-	private int xp = 0;
-	private static float playerLevel = 6;
-	private static int playerKills = 0;
+@Entity
+public class Player {
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	private Long id;
+	private String playerName = "John";
+	private int playerLevel = 6;
+	private int playerKills = 0;
 	private String racename = "";
 	private String classname = "";
 
@@ -38,30 +23,44 @@ public class Player extends GameCharacter {
 	private int smartsBonus = 0;
 	private int charmBonus = 0;
 
-	private static boolean shopping = false;
-
-	public static int heal(int hp) 
+	public Player() 
 	{
-		if (getHp() < 4) {
-			setHp(getHp() + 1);
-
-//			 if (PlayerRaceChoice.getPlayerRace() == "vamp") {
-//			 System.out.println("You Drink Some Blood "); } else {
-//			 System.out.println("You Drink A Potion "); }
-
-		} else {
-			System.out.println("You Are At Full Health ");
-			System.out.println("Not Valid Input");
-		}
-		return hp;
 	}
 
-	public int gainxp(int bonusxp) {
-		xp = bonusxp + xp;
-		return xp;
+	public Player(Long id, String playerName, int playerLevel, int playerKills, String racename, String classname,
+			int attackBonus, int dodgeBonus, int sightBonus, int smartsBonus, int charmBonus) 
+	{
+		super();
+		this.id = id;
+		this.playerName = playerName;
+		this.playerLevel = playerLevel;
+		this.playerKills = playerKills;
+		this.racename = racename;
+		this.classname = classname;
+		this.attackBonus = attackBonus;
+		this.dodgeBonus = dodgeBonus;
+		this.sightBonus = sightBonus;
+		this.smartsBonus = smartsBonus;
+		this.charmBonus = charmBonus;
 	}
 
-	public static String getPlayerName() {
+
+
+
+
+	public void setPlayerLevel(int playerLevel) {
+		this.playerLevel = playerLevel;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getPlayerName() {
 		return playerName;
 	}
 
@@ -69,28 +68,16 @@ public class Player extends GameCharacter {
 		this.playerName = playerName;
 	}
 
-	public int getXp() {
-		return xp;
-	}
-
-	public void setXp(int xp) {
-		this.xp = xp;
-	}
-
-	public static float getPlayerLevel() {
+	public float getPlayerLevel() {
 		return playerLevel;
 	}
-
-	public void setPlayerLevel(float playerLevel) {
-		this.playerLevel = playerLevel;
-	}
-
-	public static int getPlayerKills() {
+	
+	public int getPlayerKills() {
 		return playerKills;
 	}
 
-	public static void setPlayerKills(int playerKills) {
-		Player.playerKills = playerKills;
+	public void setPlayerKills(int playerKills) {
+		this.playerKills = playerKills;
 	}
 
 	public int getAttackBonus() {
@@ -133,14 +120,6 @@ public class Player extends GameCharacter {
 		this.dodgeBonus = dodgeBonus;
 	}
 
-	public static boolean isShopping() {
-		return shopping;
-	}
-
-	public static void setShopping(boolean shopping) {
-		Player.shopping = shopping;
-	}
-
 	public String getRacename() {
 		return racename;
 	}
@@ -156,6 +135,5 @@ public class Player extends GameCharacter {
 	public void setClassname(String classname) {
 		this.classname = classname;
 	}
-	
 
 }

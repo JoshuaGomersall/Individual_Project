@@ -2,9 +2,8 @@ package com.qa.business.service;
 
 import javax.inject.Inject;
 
-import org.apache.log4j.Logger;
-
 import com.qa.persistence.repository.PlayerRepository;
+import com.qa.persistence.domain.Player;
 
 public class PlayerServiceImpl implements PlayerService {
 

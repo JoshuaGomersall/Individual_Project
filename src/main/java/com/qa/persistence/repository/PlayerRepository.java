@@ -1,4 +1,5 @@
 package com.qa.persistence.repository;
+import com.qa.persistence.domain.Player;
 
 public interface PlayerRepository {
 

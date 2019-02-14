@@ -2,6 +2,7 @@ package com.qa.persistence.repository;
 
 import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
+import com.qa.persistence.domain.Player;
 
 import java.util.Collection;
 
@@ -13,8 +14,6 @@ import javax.persistence.Query;
 import javax.transaction.Transactional;
 
 import com.qa.util.JSONUtil;
-
-import Player.Player;
 
 @Transactional(SUPPORTS)
 @Default
