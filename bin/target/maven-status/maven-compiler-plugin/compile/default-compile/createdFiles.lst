@@ -1,0 +1,8 @@
+com\qa\persistence\repository\PlayerRepository.class
+com\qa\business\service\PlayerService.class
+com\qa\persistence\domain\Player.class
+com\qa\rest\PlayerEndpoint.class
+com\qa\util\JSONUtil.class
+com\qa\persistence\repository\PlayerDBRepository.class
+com\qa\business\service\PlayerServiceImpl.class
+com\qa\rest\JAXActivator.class
