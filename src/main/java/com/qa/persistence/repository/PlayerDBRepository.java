@@ -44,7 +44,7 @@ public class PlayerDBRepository implements PlayerRepository {
 	@Transactional(REQUIRED)
 	public String deletePlayer(Long id) 
 	{
-		Player playerInDB = util.getObjectForJSON(getAPlayer(id), Player.class);
+		//Player playerInDB = util.getObjectForJSON(getAPlayer(id), Player.class);
 
 		if (manager.contains(manager.find(Player.class, id))) {
 

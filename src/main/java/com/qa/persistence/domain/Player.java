@@ -36,10 +36,6 @@ public class Player {
 		this.classname = classname;
 	}
 
-
-
-
-
 	public void setPlayerLevel(int playerLevel) {
 		this.playerLevel = playerLevel;
 	}
