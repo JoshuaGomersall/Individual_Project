@@ -27,21 +27,13 @@ public class Player {
 	{
 	}
 
-	public Player(Long id, String playerName, int playerLevel, int playerKills, String racename, String classname,
-			int attackBonus, int dodgeBonus, int sightBonus, int smartsBonus, int charmBonus) 
+	public Player(Long id, String playerName, String racename, String classname) 
 	{
 		super();
 		this.id = id;
 		this.playerName = playerName;
-		this.playerLevel = playerLevel;
-		this.playerKills = playerKills;
 		this.racename = racename;
 		this.classname = classname;
-		this.attackBonus = attackBonus;
-		this.dodgeBonus = dodgeBonus;
-		this.sightBonus = sightBonus;
-		this.smartsBonus = smartsBonus;
-		this.charmBonus = charmBonus;
 	}
 
 
