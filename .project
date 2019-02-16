@@ -3,6 +3,7 @@
 	<name>individual_Project</name>
 	<comment></comment>
 	<projects>
+		<project>individual_Project-Java</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

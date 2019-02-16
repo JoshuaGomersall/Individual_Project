@@ -3,11 +3,13 @@ package com.qa.business.service;
 import javax.inject.Inject;
 
 import com.qa.persistence.repository.PlayerRepository;
+import com.qa.util.JSONUtil;
 
 public class PlayerServiceImpl implements PlayerService {
 
 	@Inject
 	private PlayerRepository repo;
+	private JSONUtil util;
 
 	
 	public String getAllPlayers() 
@@ -18,7 +20,7 @@ public class PlayerServiceImpl implements PlayerService {
 	public String addPlayer(String player) 
 	{
 		if(player.contains("Butt")) {
-			return "Can't Add This Its A Bad Word";
+			return "Can't Add This It's A Bad Word";
 		}
 		return repo.createPlayer(player);
 	}
@@ -42,6 +44,10 @@ public class PlayerServiceImpl implements PlayerService {
 	public String updatePlayer(String player, Long id) 
 	{
 		return repo.updatePlayer(player, id);
+	}
+
+	public void setUtil(JSONUtil util) {
+		this.util = util;
 	}
 
 

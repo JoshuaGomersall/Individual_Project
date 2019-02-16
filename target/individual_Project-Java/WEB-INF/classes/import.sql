@@ -1,7 +1,0 @@
-insert into Player values (DEFAULT,"Simon",10,2,"Elf","Bard",1,2,1,2,3)
-insert into Player values (DEFAULT,"Simon",10,2,"Elf","Bard",1,2,1,2,3)
-insert into Player values (DEFAULT,"Simon",10,2,"Elf","Bard",1,2,1,2,3)
-insert into Player values (DEFAULT,"Simon",10,2,"Elf","Bard",1,2,1,2,3)
-insert into Player values (DEFAULT,"Simon",10,2,"Elf","Bard",1,2,1,2,3)
-insert into Player values (DEFAULT,"Simon",10,2,"Elf","Bard",1,2,1,2,3)
-insert into Player values (DEFAULT,"Greg",10,2,"Human","Fighter",1,2,1,2,3)
