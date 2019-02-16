@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+     <link rel="stylesheet" type="text/css" href="css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="Script.js"></script>
+</head>
+<body>
+<div class="topnav">
+  <a href="./index.html">Home</a>
+  <a class="active">Create Character</a>
+  <a href="./characterload.html">Load Character</a>
+  <a href="./backstory.html">Create BackStory</a>
+  <a href="./backstoryload.html">Load BackStory</a>
+  <a href="./meleeweapon.html">Melee Weapon</a>
+  <a href="./rangedweapon.html"> Ranged Weapon</a>
+  <a href="./combat.html"> Combat</a>
+</div>
+</head>
+<body>
+
+<h1>Character Creation</h1>
+
+<FORM>
+Character Name:<br>
+  <input id="name" type="text" onchange="displayScore();" name="Name">
+
+<h3>Race :
+
+<select id="race" onchange="displayScore();">
+	<option id="DragonBorn" value="dragonborn">DragonBorn</option>
+	<option id="Dwarf" value="dwarf">Dwarf</option>
+	<option id="Elf" value="elf">Elf</option>
+	<option id="Gnome" value="gnome">Gnome</option>
+	<option id="Half-Elf" value="halfelf">Half-Elf</option>
+	<option id="Half-Orc" value="halforc">Half-Orc</option>
+	<option id="Halfling" value="halfling">Halfling</option>
+    <option id="Human" value="human">Human</option>
+	<option id="Tiefling" value="tiefling">Tiefling</option>
+  </select>
+   </h3>
+ <h3>Class 
+  <select id="class" onchange="displayScore();">
+    <option id="Barbarian" value="barbarian">Barbarian</option>
+	<option id="Bard" value="bard">Bard</option>
+	<option id="Cleric" value="cleric">Cleric</option>
+	<option id="Druid" value="Druid">Druid</option>
+    <option id="Fighter" value="fighter">Fighter</option>
+	<option id="Monk" value="monk">Monk</option>
+	<option id="Paladin" value="paladin">Paladin</option>
+	<option id="Ranger" value="ranger">Ranger</option>
+	<option id="Rouge" value="rouge">Rouge</option>
+	<option id="Sorcerer" value="sorcerer">Sorcerer</option>
+	<option id="Warlock" value="warlock">Warlock</option>
+    <option id="Wizard" value="wizard">Wizard</option>
+  </select>
+   </h3>
+   <div id="randomdisplay">
+   <p id="rannumber1"></p>
+   <p id="rannumber2"></p>
+   <p id="rannumber3"></p>
+   </div>
+	<input type="button" onclick="randomcharacter()"; value="Random"></input>
+	<br>
+	<br>
+	<input type="submit"value="Done"></input>
+</FORM>
+ 
+<h3>Character Ratings </h3>  
+<h4>
+Strength : <span id="Strength"></span>
+</br>
+Dexterity : <span id="Dex"></span>
+</br>
+Smarts :<span id="Smart"></span>
+</br>
+Vigor : <span id="Vigor"></span>
+</br>
+Charisma : <span id="Cha"></span>
+</h4>
+
+
+
+</body>
+</html>
