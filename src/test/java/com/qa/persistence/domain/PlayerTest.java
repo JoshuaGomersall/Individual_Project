@@ -21,8 +21,6 @@ public class PlayerTest {
 		john.setClassname("Bard");
 		john.setDodgeBonus(0);
 		john.setId(1l);
-		john.setPlayerKills(0);
-		john.setPlayerLevel(1);
 		john.setPlayerName("John");
 		john.setRacename("Human");
 		john.setSightBonus(0);
@@ -33,8 +31,6 @@ public class PlayerTest {
 		assertEquals("Bard", john.getClassname());
 		assertEquals(0, john.getDodgeBonus());
 		john.getId();
-		assertEquals(0, john.getPlayerKills());
-		john.getPlayerLevel();
 		assertEquals("John", john.getPlayerName());
 		assertEquals("Human", john.getRacename());
 		assertEquals(0, john.getSightBonus());

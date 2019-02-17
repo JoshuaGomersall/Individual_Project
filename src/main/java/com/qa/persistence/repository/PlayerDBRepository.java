@@ -26,11 +26,11 @@ public class PlayerDBRepository implements PlayerRepository {
 	private JSONUtil util;
 
 
-	public String getAllPlayers() {
-		Query query = manager.createQuery("Select a FROM player a");
-		Collection<Player> players = (Collection<Player>) query.getResultList();
-
-		return util.getJSONForObject(players);
+	public String getAllPlayers() 
+	{
+		Query query = manager.createQuery("SELECT q FROM Player q");
+		Collection<Player> PLAYER = (Collection<Player>) query.getResultList();
+		return util.getJSONForObject(PLAYER);
 	}
 
 	@Transactional(REQUIRED)
@@ -47,8 +47,9 @@ public class PlayerDBRepository implements PlayerRepository {
 		if (manager.contains(manager.find(Player.class, id))) {
 
 			manager.remove(manager.find(Player.class, id));
+			return "{\"message\": \"player sucessfully deleted\"}";
 		}
-		return "{\"message\": \"player sucessfully deleted\"}";
+		return "{\"message\": \"No Player With That Id Can Be Found\"}";
 	}
 
 	public String getAPlayer(Long id) 
@@ -66,7 +67,8 @@ public class PlayerDBRepository implements PlayerRepository {
 	}
 
 	public String updatePlayer(String player, Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		deletePlayer(id);
+		createPlayer(player);
+		return "{\"message\": \"player sucessfully updated\"}";
 	}
 }

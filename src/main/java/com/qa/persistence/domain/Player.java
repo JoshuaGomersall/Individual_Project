@@ -4,15 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Player")
 public class Player {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private Long id;
 	private String playerName = "John";
-	private int playerLevel = 6;
-	private int playerKills = 0;
 	private String racename = "";
 	private String classname = "";
 
@@ -23,21 +23,15 @@ public class Player {
 	private int smartsBonus = 0;
 	private int charmBonus = 0;
 
-	public Player() 
-	{
+	public Player() {
 	}
 
-	public Player(Long id, String playerName, String racename, String classname) 
-	{
+	public Player(Long id, String playerName, String racename, String classname) {
 		super();
 		this.id = id;
 		this.playerName = playerName;
 		this.racename = racename;
 		this.classname = classname;
-	}
-
-	public void setPlayerLevel(int playerLevel) {
-		this.playerLevel = playerLevel;
 	}
 
 	public Long getId() {
@@ -54,18 +48,6 @@ public class Player {
 
 	public void setPlayerName(String playerName) {
 		this.playerName = playerName;
-	}
-
-	public float getPlayerLevel() {
-		return playerLevel;
-	}
-	
-	public int getPlayerKills() {
-		return playerKills;
-	}
-
-	public void setPlayerKills(int playerKills) {
-		this.playerKills = playerKills;
 	}
 
 	public int getAttackBonus() {
