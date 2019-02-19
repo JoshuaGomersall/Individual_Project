@@ -19,7 +19,7 @@ public class Player {
 	// Player Bonus
 	private int attackBonus = 0;
 	private int dodgeBonus = 0;
-	private int sightBonus = 0;
+	private int vigorBonus = 0;
 	private int smartsBonus = 0;
 	private int charmBonus = 0;
 
@@ -58,12 +58,12 @@ public class Player {
 		this.attackBonus = attackBonus;
 	}
 
-	public int getSightBonus() {
-		return sightBonus;
+	public int getVigorBonus() {
+		return vigorBonus;
 	}
 
-	public void setSightBonus(int sightBonus) {
-		this.sightBonus = sightBonus;
+	public void setVigorBonus(int vigorBonus) {
+		this.vigorBonus = vigorBonus;
 	}
 
 	public int getSmartsBonus() {

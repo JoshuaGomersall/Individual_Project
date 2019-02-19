@@ -1,0 +1,5 @@
+com\qa\persistence\domain\PlayerTest.class
+com\qa\rest\PlayerEndpointTest.class
+com\qa\business\service\PlayerServiceImplTest.class
+com\qa\persistence\repository\PlayerDBRepositoryTest.class
+com\qa\util\JAXActivatorTest.class
