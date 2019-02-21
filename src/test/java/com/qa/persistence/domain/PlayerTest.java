@@ -23,7 +23,7 @@ public class PlayerTest {
 		john.setId(1l);
 		john.setPlayerName("John");
 		john.setRacename("Human");
-		john.setSightBonus(0);
+		john.setVigorBonus(0);
 		john.setSmartsBonus(0);
 		
 		assertEquals(0, john.getAttackBonus());
@@ -33,7 +33,7 @@ public class PlayerTest {
 		john.getId();
 		assertEquals("John", john.getPlayerName());
 		assertEquals("Human", john.getRacename());
-		assertEquals(0, john.getSightBonus());
+		assertEquals(0, john.getVigorBonus());
 		assertEquals(0, john.getSmartsBonus());
 	}
 

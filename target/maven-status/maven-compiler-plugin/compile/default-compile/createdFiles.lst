@@ -1,8 +1,14 @@
 com\qa\persistence\repository\PlayerRepository.class
-com\qa\business\service\PlayerService.class
+com\qa\persistence\domain\BackStory.class
 com\qa\persistence\domain\Player.class
+com\qa\persistence\repository\BackStoryRepository.class
 com\qa\rest\PlayerEndpoint.class
-com\qa\util\JSONUtil.class
 com\qa\persistence\repository\PlayerDBRepository.class
 com\qa\business\service\PlayerServiceImpl.class
+com\qa\business\service\BackStoryService.class
+com\qa\persistence\repository\BackStoryDBRepository.class
+com\qa\business\service\PlayerService.class
+com\qa\rest\BackStoryEndpoint.class
+com\qa\util\JSONUtil.class
+com\qa\business\service\BackStoryServiceImpl.class
 com\qa\rest\JAXActivator.class

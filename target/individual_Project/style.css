@@ -1,0 +1,85 @@
+
+@font-face {
+   font-family: Adventure;
+   src: Adventure..otf;
+}
+
+body {
+  background-color: #ff5447;
+}
+
+h1 
+{
+  font-weight: bold;
+  font-family: Adventure;
+  src: Adventure..otf;
+}
+h2 
+{
+  font-weight: normal;
+  font-family: Adventure;
+  src: Adventure..otf;
+}
+h3 
+{
+  font-weight: normal;
+  font-family: Adventure;
+  src: Adventure..otf;
+}
+h4 
+{
+  font-weight: normal;
+  font-family: Adventure;
+  src: Adventure..otf;
+}
+p 
+{
+  font-weight: normal;
+display : none;
+}
+checkbox 
+{
+  font-weight: normal;
+  font-family: Adventure;
+  src: Adventure..otf;
+}
+
+.list
+{
+font-family: Adventure;
+  src: Adventure..otf;
+	float: centre;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration;
+  font-size: 20px;
+}
+
+
+.topnav {
+font-family: Adventure;
+  src: Adventure..otf;
+  overflow: hidden;
+  background-color: grey;
+}
+
+.topnav a 
+{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration;
+  font-size: 20px;
+}
+.topnav a:hover 
+{
+  background-color: #ddd;
+  color: grey;
+}
+.topnav a.active 
+{
+  background-color: #ff5447;
+  color: white;
+}

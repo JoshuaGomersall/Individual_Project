@@ -59,10 +59,11 @@ public class PlayerDBRepositoryTest {
 	
 	@Test
 	public void testGetAllPlayers() {
+		
 		Mockito.when(manager.createQuery(Mockito.anyString())).thenReturn(query);
-		List<Player> classrooms = new ArrayList<Player>();
-		classrooms.add(util.getObjectForJSON(MOCK_OBJECT, Player.class));
-		Mockito.when(query.getResultList()).thenReturn(classrooms);
+		List<Player> players = new ArrayList<Player>();
+		players.add(util.getObjectForJSON(MOCK_OBJECT, Player.class));
+		Mockito.when(query.getResultList()).thenReturn(players);
 	}
 
 	@Test
