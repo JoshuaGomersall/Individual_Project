@@ -1,5 +1,3 @@
-'use strict'
-
 function submitCharacterButton()
 {
 	 let xhr = new XMLHttpRequest();
@@ -11,6 +9,7 @@ function submitCharacterButton()
         xhr.send();
 }
 
+
 function loadAllCharacters()
 {
 	let textwords = document.getElementById("temptext").value;
@@ -18,34 +17,62 @@ function loadAllCharacters()
 		xhr.withcredentials=true;
         xhr.open("GET",  "http://localhost:8080/individual_Project/api/Player/getAllPlayers");
         xhr.onload = () => {
-			let temp = xhr.responseText;
-			temp = JSON.parse(temp);
-			temp = JSON.stringify(temp);
-			
-			let wordnice = xhr.responseText.replace('['," ");
-			wordnice = wordnice.replace(']'," ");
-			wordnice = wordnice.replace(/{/g," ");
-			wordnice = wordnice.replace(/}/g,"<br/>");
-			wordnice = wordnice.replace(/\"/g," ");
-			wordnice = wordnice.replace(/,/g,"<br/>");
-
-			document.getElementById('temptext').innerHTML = wordnice;
-			console.log(wordnice);
+            var temp = JSON.parse(xhr.responseText);
+			textwords.innerHTML = temp;
+			textwords.value = temp;
+			document.getElementById('temptext').value = "" + temp;
+			console.log(temp);
         }
         xhr.send();
 }
 
+
 function randomCharacter()
 {
-let rand1 = document.getElementById("rannumber1").innerHTML = Math.floor(Math.random() * 10) + 1;
-let ran2  = document.getElementById("rannumber2").innerHTML = Math.floor(Math.random() * 13) + 1;
-let ran3 = document.getElementById("rannumber3").innerHTML = Math.floor(Math.random() * 10) + 1;
+var ran1 = document.getElementById("rannumber1").innerHTML = Math.floor(Math.random() * 10) + 1;
+var ran2  = document.getElementById("rannumber2").innerHTML = Math.floor(Math.random() * 13) + 1;
+var ran3 = document.getElementById("rannumber3").innerHTML = Math.floor(Math.random() * 10) + 1;
 
-let names = ['John', 'Greg', 'Richard','Simon','Kleg','Nakgu','Susan','Amy','Azura','Vinncento','Gwen']
-document.getElementById('name').value = names[rand1];
-
-
-document.getElementById('class').selected = 'true';
+if (ran1 === 1)
+{
+	document.getElementById('name').value = "John";
+}
+else if (ran1 === 2)
+{
+	document.getElementById('name').value = "Greg";
+}
+else if (ran1 === 3)
+{
+	document.getElementById('name').value = "Richard";
+} 
+else if (ran1 === 4)
+{
+	document.getElementById('name').value = "Susan";
+}
+else if (ran1 === 5)
+{
+	document.getElementById('name').value = "Tiffany";
+} 
+else if (ran1 === 6)
+{
+	document.getElementById('name').value = "Gwen";
+}
+else if (ran1 === 7)
+{
+	document.getElementById('name').value = "Namfuddle";
+} 
+else if (ran1 === 8)
+{
+	document.getElementById('name').value = "Rahoon";
+}
+else if (ran1 === 9)
+{
+	document.getElementById('name').value = "KLARK";
+} 
+else if (ran1 > 9)
+{
+	console.log("boop");
+}
 
 if (ran2 === 1)
 {
@@ -146,19 +173,19 @@ displayScore();
 
 function displayScore() 
 {
-let racestr =1;
-let racedex = 1;
-let racesmart =1;
-let racevigor = 1;
-let racecha = 1;
+var racestr =1;
+var racedex = 1;
+var racesmart =1;
+var racevigor = 1;
+var racecha = 1;
 
-let classstr = 1;
-let classdex = 1;
-let classsmart =1;
-let classvigor = 1;
-let classcha = 1;
+var classstr = 1;
+var classdex = 1;
+var classsmart =1;
+var classvigor = 1;
+var classcha = 1;
 
-let race = document.getElementById('race');
+var race = document.getElementById('race');
 
 if (race.options[race.selectedIndex].text === "DragonBorn")
 {
@@ -233,7 +260,7 @@ if (race.options[race.selectedIndex].text === "Tiefling")
 	racecha = 2;
 }
 
-let clazz = document.getElementById('class');
+var clazz = document.getElementById('class');
 if (clazz.options[clazz.selectedIndex].text === "Barbarian")
 {
 	classstr = 2;
@@ -331,21 +358,21 @@ if (clazz.options[clazz.selectedIndex].text === "Wizard")
 	classcha = 1;
 }
 
-	let strengthtotal = racestr + classstr;
-	let dextotal = racedex + classdex;
-	let smarttotal = racesmart + classsmart;
-	let vigortotal = racevigor + classvigor;
-	let chatotal = racecha + classcha;
+	var strengthtotal = racestr + classstr;
+	var dextotal = racedex + classdex;
+	var smarttotal = racesmart + classsmart;
+	var vigortotal = racevigor + classvigor;
+	var chatotal = racecha + classcha;
 
 
-let strength = document.getElementById('Strength');
+var strength = document.getElementById('Strength');
 	strength.innerHTML = strengthtotal;
-	let dex = document.getElementById('Dex');
+	var dex = document.getElementById('Dex');
 	dex.innerHTML = dextotal;
-	let smart = document.getElementById('Smart');
+	var smart = document.getElementById('Smart');
 	smart.innerHTML = smarttotal;
-	let vigor = document.getElementById('Vigor');
+	var vigor = document.getElementById('Vigor');
 	vigor.innerHTML = vigortotal;
-	let cha = document.getElementById('Cha');
+	var cha = document.getElementById('Cha');
 	cha.innerHTML = chatotal;
 }
