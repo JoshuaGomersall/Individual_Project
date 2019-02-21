@@ -58,16 +58,16 @@ public class Player {
 		this.attackBonus = attackBonus;
 	}
 
+	public int getSmartsBonus() {
+		return smartsBonus;
+	}
+
 	public int getVigorBonus() {
 		return vigorBonus;
 	}
 
 	public void setVigorBonus(int vigorBonus) {
 		this.vigorBonus = vigorBonus;
-	}
-
-	public int getSmartsBonus() {
-		return smartsBonus;
 	}
 
 	public void setSmartsBonus(int smartsBonus) {
