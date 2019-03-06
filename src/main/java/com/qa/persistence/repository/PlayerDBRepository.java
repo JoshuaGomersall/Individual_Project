@@ -71,4 +71,11 @@ public class PlayerDBRepository implements PlayerRepository {
 		createPlayer(player);
 		return "{\"message\": \"player sucessfully updated\"}";
 	}
+
+	@Override
+	public String getAPlayerbyname(String name) {
+		Query query = manager.createQuery("SELECT a FROM Player a WHERE playerName LIKE '%"+name+"%'");
+		Collection<Player> PLAYER = (Collection<Player>) query.getResultList();
+		return util.getJSONForObject(PLAYER);
+	}
 }

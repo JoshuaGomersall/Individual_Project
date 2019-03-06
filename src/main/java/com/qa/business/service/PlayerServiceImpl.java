@@ -12,6 +12,11 @@ public class PlayerServiceImpl implements PlayerService {
 	private JSONUtil util;
 
 	
+	public String getAPlayerByName(String name) 
+	{
+		return repo.getAPlayerbyname(name);
+	}
+	
 	public String getAllPlayers() 
 	{
 		return repo.getAllPlayers();

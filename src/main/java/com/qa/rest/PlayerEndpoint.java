@@ -29,6 +29,13 @@ public class PlayerEndpoint {
 	public String getAPlayer(@PathParam("id") Long id) {
 		return service.getAPlayer(id);
 	}
+	
+	@Path("/getAPlayerByName/{name}")
+	@GET
+	@Produces({ "application/json" })
+	public String getAPlayer(@PathParam("name") String name) {
+		return service.getAPlayerByName(name);
+	}
 
 	@Path("/createPlayer")
 	@POST
