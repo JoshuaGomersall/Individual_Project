@@ -10,6 +10,8 @@ public interface PlayerRepository {
 	
 	String getAPlayer(Long id);
 	
+	String getAPlayerbyname(String name);
+	
 	//U
 	String updatePlayer(String player, Long id);
 

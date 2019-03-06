@@ -9,6 +9,8 @@ public interface PlayerService {
 	String getAllPlayers();
 	
 	String getAPlayer(Long id);
+	
+	String getAPlayerByName(String name); 
 
 	//U
 	String updatePlayer(String Player, Long id);
